@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Rock Paper Scissors</title>
+            <meta charset="utf-8">
+        </head>
+
+        <body>
+            <script>
+                const items = ["Rock", "Paper", "Scissors"];
+
+                function computerPlay() {
+                    let item = items[Math.floor(Math.random() * items.length)];
+                    return item;
+                }
+                
+                function PlayerSelection() {
+                    let answer = prompt("Choose between Rock, Paper and Scissors");
+                    return answer.charAt(0).toUpperCase() + answer.slice(1).toLowerCase();
+                }
+
+                
+                
+
+                function play() {
+
+                    let comp = computerPlay();
+                    let player = PlayerSelection();
+
+                    if (comp == play) {
+                        return "Tie";
+                    }
+                    else if (player == "Rock" && comp == "Scissors") {
+                        return "You Win! Rock beats Scissors";
+                    }
+                    else if (player == "Scissors" && comp == "Paper") {
+                        return "You Win! Scissors beats Paper";
+                    }
+                    else if (player == "Paper" && comp == "Rock") {
+                        return "You Win! Paper Beats Rock";
+                    }
+                    else if (player == "Rock" && comp == "Paper") {
+                        return "You Lose! Paper beats Rock";
+                    }
+                    else if (player == "Paper" && comp == "Scissors") {
+                        return "You Lose! Scissors beats Paper";
+                    }
+                    else if (player == "Scissors" && comp == "Rock"){
+                        return "You Lose! Rock beats Scissors";
+                    }
+                }
+                
+                function game() {
+                    for (i = 0; i < 5; i++) {
+                        console.log(play());
+                    }
+                }
+
+                game();
+            </script>
+        </body>
+    </html>
