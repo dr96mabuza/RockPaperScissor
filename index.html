@@ -19,15 +19,12 @@
                     return answer.charAt(0).toUpperCase() + answer.slice(1).toLowerCase();
                 }
 
-                
-                
-
                 function play() {
 
                     let comp = computerPlay();
                     let player = PlayerSelection();
 
-                    if (comp == play) {
+                    if (comp == player) {
                         return "Tie";
                     }
                     else if (player == "Rock" && comp == "Scissors") {
